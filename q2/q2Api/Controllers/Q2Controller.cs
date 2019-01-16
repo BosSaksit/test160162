@@ -12,13 +12,14 @@ namespace q2Api.Controllers
     public class Q2Controller : ControllerBase
     {
         public static List<Q2> data = new List<Q2>{
-            new Q2 {Id = 1,nameProduct = "fesfsef",Price = 123}
+            new Q2 {Id = 1,nameProduct = "iphone",Price = 123}
  
         };
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<Q2>> Get()
         {
+
            return data.ToList();
         }
 
@@ -32,22 +33,77 @@ namespace q2Api.Controllers
         // POST api/values
         [HttpPost]
         public void Post(Q2 model)
+        { 
         {
-            var id = data.Max(it => it.Id)+1;
+             var id = data.Max(it => it.Id)+1;
             model.Id = id;
             data.Add(model);
         }
-
+           
+        }
+    
         // PUT api/values/5
         [HttpPut("{id}")]
         public void Put(int id,Q2 model)
         {
+            if (model.Amount>0){
+            var idx = model.Id;
+            var name = model.nameProduct;
+            var price = model.Price;
+            var amount = model.Amount;
+            var total =model.Total;
+            var pay = model.Pay;
+            for (int i = 1; i <= idx; i++)
+            {
+                var sum = new Q2(){
+                    nameProduct = name,
+                    
+                    Price = price,
+                    Amount = amount,
+                    Total = price*amount,
+                    Pay = price*amount+pay,
+                    Id = i,
+                   
+                };
+               pay = sum.Pay;
+            var edit = data.FirstOrDefault(it => it.Id==id);
+            data.Remove(edit);
+            model.Id = id;
+            data.Add(sum);
+            }
+            pay = pay;
+        }else if(model.Amount%4==0){
+            var idx = model.Id;
+            var name = model.nameProduct;
+            var price = model.Price;
+            var amount = model.Amount;
+            var total =model.Total;
+            var pay = model.Pay;
+            for (int i = 1; i <= idx; i++)
+            {
+                var sum = new Q2(){
+                    nameProduct = name,
+                    Price = price,
+                    Amount = amount,
+                    Total = (price*amount)-price,
+                    Pay = (((price*amount)+pay)-price),
+                    Id = i,
+                   
+                };
+                pay = sum.Pay;
+                var edit = data.FirstOrDefault(it => it.Id==id);
+            data.Remove(edit);
+            model.Id = id;
+            data.Add(sum);
+            }
+            pay=pay;
+        }else{
             var edit = data.FirstOrDefault(it => it.Id==id);
             data.Remove(edit);
             model.Id = id;
             data.Add(model);
         }
-
+        }
         // DELETE api/values/5
         [HttpDelete("{id}")]
         public void Delete(int id)

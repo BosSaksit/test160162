@@ -7,12 +7,45 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>checkbill</ion-title>
+    <ion-title>คำนวณราคา</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-
+  <ion-grid style="background-color: cyan">
+    <ion-row>
+      <ion-col>
+        ชื่อสินค้า
+      </ion-col>
+      <ion-col>
+        ราคาต่อหน่วย
+      </ion-col>
+      <ion-col>
+        จำนวน
+      </ion-col>
+      <ion-col>
+        ราคารวม
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid style="background-color:blanchedalmond">
+      <ion-row *ngFor="let x of Q2">
+        <ion-col>
+          {{ x.nameProduct }}
+        </ion-col>
+        <ion-col>
+          {{ x.price }}
+        </ion-col>
+        <ion-col>
+          {{ x.amount }}
+        </ion-col>
+        <ion-col>
+          {{ x.total }}
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-label> ยอดชำระทั้งหมด : {{ payment }} </ion-label>
+   
 </ion-content>
