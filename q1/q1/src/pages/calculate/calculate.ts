@@ -54,7 +54,7 @@ export class CalculatePage {
       
     });
     this.http.get("https://localhost:5001/api/Q1").subscribe((data) =>{
-      this.q1x = data
+      this.q1x = data;
     });
   }
 }
