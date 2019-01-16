@@ -32,16 +32,35 @@ namespace testapi.Controllers
         [HttpPost]
         public void Post(Q1 model)
         {
-            var id = data.Max(it => it.Id) + 1;
+           var year = model.Id;
+           var Interest2 = model.Interest;
+           var moneyStart = model.Outstanding;
+           
+           for (int i = 0; i < year; i++)
+           {
+               var sum = new Q1(){
+                   Outstanding = moneyStart,
+                   Interest = Interest2,
+                   Total = (moneyStart * Interest2)/100,
+                   Payments = moneyStart+((moneyStart * Interest2)/100),
+                   
+                  // Payments = ((moneyStart * Interest2)/100),
+                   Id = i+1
+               };
+               data.Add(sum);
+               moneyStart = sum.Payments;
+           }
+
+           /* var id = data.Max(it => it.Id) + 1;
             model.Id = id;
-            data.Add(model);
+            data.Add(model);*/
         }
 
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpDelete()]
+        public void Delete()
         {
-            var selectedStudent = data.FirstOrDefault(it => it.Id == id);
-            data.Remove(selectedStudent);
+            
+            data.RemoveAll(it => true);
         }
 
         [HttpPut("{id}")]

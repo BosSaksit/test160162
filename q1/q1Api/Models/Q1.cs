@@ -6,7 +6,7 @@ namespace q1Api.Models
         public int Outstanding {get; set;}
         public int Interest {get; set;}
         public int Payments {get; set;}
-
+        public int Total {get ; set;}
 
     }
 }

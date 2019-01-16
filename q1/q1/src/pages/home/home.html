@@ -13,7 +13,7 @@
   
   <ion-item>
     <ion-label floting color="dark">กำหนดอัตราดอกเบี้ย :</ion-label>
-    <ion-input type="number"></ion-input>
+    <ion-input [(ngModel)]="interest" type="number"></ion-input>
   </ion-item>
   <br>
   <button ion-button round (click)="done1()" color="secondary">Done</button>

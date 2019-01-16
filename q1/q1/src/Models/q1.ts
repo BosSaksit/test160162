@@ -3,4 +3,5 @@ export class q1 {
     outstanding:number
     interest:number
     payments:number
+    total:number
 }

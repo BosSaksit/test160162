@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController,NavParams } from 'ionic-angular';
 import { CalculatePage } from '../calculate/calculate';
 import { HttpClient } from '@angular/common/http';
 @Component({
@@ -7,12 +7,13 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: 'home.html'
 })
 export class HomePage {
+  interest:any
 
-  constructor(public navCtrl: NavController, public http: HttpClient) {
+  constructor(public navParams: NavParams,public navCtrl: NavController, public http: HttpClient) {
 
   }
   done1(){
-    this.navCtrl.push(CalculatePage);
+    this.navCtrl.push(CalculatePage,this.interest);
   }
 
 }
