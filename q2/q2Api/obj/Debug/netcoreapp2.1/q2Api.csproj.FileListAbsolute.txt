@@ -1,0 +1,14 @@
+F:\workthes\test160162\q2\q2Api\bin\Debug\netcoreapp2.1\q2Api.deps.json
+F:\workthes\test160162\q2\q2Api\bin\Debug\netcoreapp2.1\q2Api.runtimeconfig.json
+F:\workthes\test160162\q2\q2Api\bin\Debug\netcoreapp2.1\q2Api.runtimeconfig.dev.json
+F:\workthes\test160162\q2\q2Api\bin\Debug\netcoreapp2.1\q2Api.dll
+F:\workthes\test160162\q2\q2Api\bin\Debug\netcoreapp2.1\q2Api.pdb
+F:\workthes\test160162\q2\q2Api\obj\Debug\netcoreapp2.1\q2Api.csprojAssemblyReference.cache
+F:\workthes\test160162\q2\q2Api\obj\Debug\netcoreapp2.1\q2Api.csproj.CoreCompileInputs.cache
+F:\workthes\test160162\q2\q2Api\obj\Debug\netcoreapp2.1\q2Api.RazorAssemblyInfo.cache
+F:\workthes\test160162\q2\q2Api\obj\Debug\netcoreapp2.1\q2Api.RazorAssemblyInfo.cs
+F:\workthes\test160162\q2\q2Api\obj\Debug\netcoreapp2.1\q2Api.AssemblyInfoInputs.cache
+F:\workthes\test160162\q2\q2Api\obj\Debug\netcoreapp2.1\q2Api.AssemblyInfo.cs
+F:\workthes\test160162\q2\q2Api\obj\Debug\netcoreapp2.1\q2Api.RazorTargetAssemblyInfo.cache
+F:\workthes\test160162\q2\q2Api\obj\Debug\netcoreapp2.1\q2Api.dll
+F:\workthes\test160162\q2\q2Api\obj\Debug\netcoreapp2.1\q2Api.pdb

@@ -1,0 +1,29 @@
+<!--
+  Generated template for the BasketPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>สั่งสินค้า</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-item>
+        <ion-label color="dark">ชื่อสินค้า :</ion-label>
+        <br><br>
+        <ion-label color="dark">ราคาสินค้าต่อหน่วย :</ion-label>
+        <br><br>
+       </ion-item>
+       <ion-item>
+        <ion-label floating color="dark">จำนวน</ion-label>
+    <ion-input type="number"></ion-input>
+     </ion-item>
+      <br><br>
+      <button ion-button round color="secondary" (click)="bill()">Done</button>
+</ion-content>

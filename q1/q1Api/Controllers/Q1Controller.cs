@@ -13,7 +13,7 @@ namespace testapi.Controllers
     public class Q1Controller : ControllerBase
     {
         public static List<Q1> data = new List<Q1>{
-            
+           
         };
 
         [HttpGet]

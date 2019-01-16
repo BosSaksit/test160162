@@ -50,10 +50,7 @@ namespace q1Api
                 builder.WithOrigins("*")
                        .AllowAnyHeader()
                        .AllowAnyMethod()
-                );
-
-
-           
+                );      
             // Enable middleware to serve generated Swagger as a JSON endpoint.
     app.UseSwagger();
 

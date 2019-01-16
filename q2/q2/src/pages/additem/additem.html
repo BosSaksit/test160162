@@ -1,0 +1,28 @@
+<!--
+  Generated template for the AdditemPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>เพิ่มสินค้า</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <ion-label color="dark" floating>ชื่อสินค้า :</ion-label>
+    <ion-input [(ngModel)]="Q2.nameProduct" type="text"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="dark" floating>ราคาสินค้าต่อหน่วย :</ion-label>
+    <ion-input [(ngModel)]="Q2.price" type="number"></ion-input>
+  </ion-item>
+  <br><br>
+  <button ion-button round color="secondary" (click)="Done()">Done</button>
+
+</ion-content>

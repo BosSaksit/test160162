@@ -1,14 +1,32 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      รายการสินค้า
     </ion-title>
+    <ion-buttons right>
+      <button ion-button icon-only color="dark" (click)="toAdditem()">
+        <ion-icon name="md-add"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-card *ngFor="let n of Q2">
+      <ion-card-header style="font-size: 22px">
+        ชื่อสินค้า : {{ n.nameProduct }}
+      </ion-card-header>
+      <ion-list>
+         <ion-label style="font-size: 18px" color="dark">ราคาสินค้าต่อหน่วย : {{ n.price }}</ion-label>
+           <ion-label style="font-size: 18px" color="dark">จำนวน</ion-label>
+        <ion-input style="background-color: bisque" placeholder="กรอกจำนวน" [(ngModel)]="Q2.amount" type="number"></ion-input>
+        <button ion-item round color="dark" (click)="AddOrder(n.id,n.nameProduct,n.price)">สั่งซื้อ</button>
+      </ion-list>
+      
+  </ion-card>
 </ion-content>
+<ion-footer>
+  <ion-toolbar color="light">
+    <button ion-button block round color="secondary" (click)="toBill()">คิดเงิน</button>
+  </ion-toolbar>
+</ion-footer>
